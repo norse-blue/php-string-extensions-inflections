@@ -27,7 +27,4 @@
     <!-- Folders and files -->
     <file>./src</file>
     <file>./tests</file>
-
-    <!-- Excluded folders and files -->
-    <exclude-pattern>./src/.ide_helper.php</exclude-pattern>
 </ruleset>

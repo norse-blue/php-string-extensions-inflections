@@ -61,8 +61,4 @@ return [
 
     ],
 
-    'exclude' => [
-        'src/.ide_helper.php',
-    ],
-
 ];

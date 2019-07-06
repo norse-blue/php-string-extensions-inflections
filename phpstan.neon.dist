@@ -1,6 +1,4 @@
 parameters:
-    excludes_analyse:
-        - %currentWorkingDirectory%/src/.ide_helper.php
     level: 5
     paths:
         - src
