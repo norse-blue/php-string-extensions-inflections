@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace NorseBlue\StringExtensions\Inflections\Extensions;
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\InflectorFactory;
+use Doctrine\Inflector\Language;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\StringType;
 use function NorseBlue\ScalarObjects\Functions\string;
@@ -17,12 +18,12 @@ final class StringPluralExtension extends StringType implements ExtensionMethod
     public function __invoke(): callable
     {
         /**
-         * Get the plural form of an English word.
+         * Get the plural form of a word.
          *
          * @return \NorseBlue\ScalarObjects\Types\StringType
          */
-        return function (): StringType {
-            return string(Inflector::pluralize($this->value));
+        return function (string $language = Language::ENGLISH): StringType {
+            return string(InflectorFactory::createForLanguage($language)->build()->pluralize($this->value));
         };
     }
 }

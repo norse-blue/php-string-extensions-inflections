@@ -8,5 +8,4 @@ First release.
 - Added the `plural` extension method for `StringType`.
 
 ---
-
 Previous: [Release 0.0.0](CHANGELOG-0.0.0.md)
